@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e24343 0%, #f9f9f9 100%);
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #222;
+    text-align: center;
+    margin-top: 30px;
+}
+
+p {
+    color: #444;
+    text-align: center;
+    margin: 20px 0;
+}
+
+header {
+    background-color: #d1aeca;
+    padding: 30px 0 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #e24343;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    border-top: 1px solid #e24343;
+    font-size: 1em;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin: 0 18px;
+}
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+nav ul li a:hover {
+    background: #dfec21;
+    color: #e24343;
+}
+
+section {
+    margin: 30px auto;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    max-width: 900px;
+}
+section h2 {
+    color: #e24343;
+    margin-bottom: 18px;
+}
+section p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Conferencias estilo tipo cards */
+#conferencias ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#conferencias ul li {
+    background: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 18px 16px;
+    width: 260px;
+    margin-bottom: 0;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#conferencias ul li:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(226,67,67,0.15);
+}
+#conferencias ul li img {
+    max-width: 90%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 12px auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+}
+#conferencias ul li strong {
+    color: #e24343;
+    font-size: 1.15em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+form label {
+    font-weight: bold;
+    color: #e24343;
+}
+form input[type="text"],
+form input[type="email"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 1em;
+}
+form button {
+    background-color: #e24343;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+form button:hover {
+    background-color: #dfec21;
+    color: #e24343;
+}
+
+@media (max-width: 900px) {
+    #conferencias ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #conferencias ul li {
+        width: 90%;
+    }
+    section {
+        padding: 18px 5px;
+    }
+}
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 8px 0;
+    }
+    section {
+        padding: 10px 2px;
+    }
+    footer {
+        font-size: 0.9em;
+        padding: 8px 0;
+        position: static;
+    }
+}
+
+/* Elimina reglas innecesarias para meta en conferencias */
